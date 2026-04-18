@@ -212,7 +212,7 @@
     <div class="row footer__row">
         <a href="#" class="footer__anchor">
             <figure class="footer__logo">
-                <img src="./assets/logo.svg" class="footer_logo--img" alt="">
+                <img src="./assets/Sue-Ann Logo-Black, white, yellow-use.png" class="footer_logo--img" alt="">
             </figure>
             <span class="footer__logo--popper">
                 Top
@@ -245,7 +245,13 @@
     </div>
 </footer>
 <script>
-  window.onload = () => window.scrollTo(0, 0);
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
+  window.onload = () => {
+    window.scrollTo(0, 0);
+    history.replaceState(null, '', window.location.pathname);
+  };
 </script>
 </body>
 
