@@ -27,7 +27,13 @@ p {
 a {
     text-decoration: none;
     position: relative;
+    transition: opacity 300ms ease;
 }
+
+i:hover {
+    opacity: 0.7;
+}
+
 
 .link__hover-effect:after {
     content: "";
@@ -182,13 +188,13 @@ nav {
 
 .about-me__info--title {
     margin-bottom: 16px;
-    animation: fade-up 650ms 400ms backwards;
+    animation: fade-up 650ms 600ms backwards;
 }
 
 .about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
-    animation: fade-up 650ms 400ms backwards;
+    animation: fade-up 750ms 1600ms backwards;
  }
     
  .about-me__link { 
@@ -199,7 +205,7 @@ nav {
  
  .about-me__links {
     margin-top: 26px;
-    animation: fade-up 650ms 400ms backwards;
+    animation: fade-up 650ms 2000ms backwards;
  }
 
 @keyframes fade-up {
@@ -221,8 +227,34 @@ nav {
 
 .about-me__img {
     width: 100%;
+    animation: fade-in 1500ms 2800ms backwards;
 }
 
+@keyframes fade-in {
+    0% {
+    opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.wave {
+    display: inline-block;
+    animation: animate-wave 500ms infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 
 /* TECH - STACK */
